@@ -1,3 +1,5 @@
+// Generaror de Arrays con tamaño aleatorio.
+
 #include <stdio.h>
 #include <stdlib.h> // rand(), srand()
 #include <unistd.h> // getpid()
