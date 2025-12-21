@@ -17,7 +17,7 @@ void crear_tiempo(Tiempo *t); /* Definimos las structs t1 y t2. */
 
 int compara_tiempos(Tiempo *t1, Tiempo *t2);
 
-void imprime_tiempo(Tiempo t);
+void imprime_tiempo(Tiempo *t);
 
 int main()
 {
@@ -26,6 +26,8 @@ int main()
 	printf("\t -- Tiempo 1 --\n");
 	crear_tiempo(&t1);
 
+	printf("\n");
+
 	printf("\t -- Tiempo 2 --\n");
 	crear_tiempo(&t2);
 
@@ -33,9 +35,9 @@ int main()
 	
 	printf("\n");
 
-	imprime_tiempo(t1);
+	imprime_tiempo(&t1);
 
-	imprime_tiempo(t2);
+	imprime_tiempo(&t2);
 
 	printf("\n");
 
@@ -96,7 +98,7 @@ int compara_tiempos(Tiempo *t1, Tiempo *t2)
 	return IGUAL;
 }
 
-void imprime_tiempo(Tiempo t)
+void imprime_tiempo(Tiempo *t)
 {
-	printf("%d/%d/%d %d:%d:%d\n", t.dia, t.mes, t.anio, t.hora, t.minuto, t.segundo);
+	printf("%d/%d/%d %d:%d:%d\n", t->dia, t->mes, t->anio, t->hora, t->minuto, t->segundo);
 }
